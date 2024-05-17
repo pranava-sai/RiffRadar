@@ -1,0 +1,7 @@
+<!-- send_button_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/my_primary"/>
+    <corners android:radius="10dp"/>
+    <size android:width="40dp"/>
+</shape>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFFFF</color>
+    <color name="colorSecondary">#FF000000</color>
+    <color name="textColorPrimary">#FF000000</color>
+    <color name="textColorSecondary">#FFFFFFFF</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="grey">#A0A0A0</color>
+    <color name="lightgrey">#FFE8BC</color>
+    <color name="halfGrey">#33A0A0A0</color>
+    <color name="red">#9C0000</color>
+    <color name="darkGrey">#6b6b6b</color>
+    <color name="my_primary">#FF000000</color>
+    <color name="my_secondary">#FFFFFFFF</color>
+    <color name="feedback">#71BDFF</color>
+    <color name="feedback_bg">#B6D5F2</color>
+    <color name="star_color">#FFD700</color>
+    <color name="group_info_bg">#EDF6FF</color>
+    <color name="black2">#000000</color>
+    <color name="blue7">#1E88E5</color>
+    <color name="sent">#A697C1</color>
+    <color name="collected">#96BEDD</color>
+</resources>

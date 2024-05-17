@@ -1,0 +1,283 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=windows-1252"> 
+  <title>Coverage Report > VenueController</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">onetoone.Users</a>
+</div>
+
+<h1>Coverage Summary for Class: VenueController (onetoone.Users)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">VenueController</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    9.1%
+  </span>
+  <span class="absValue">
+    (1/11)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    4.6%
+  </span>
+  <span class="absValue">
+    (3/65)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package onetoone.Users;
+&nbsp;
+&nbsp;import io.swagger.v3.oas.annotations.Operation;
+&nbsp;import io.swagger.v3.oas.annotations.tags.Tag;
+&nbsp;import onetoone.Addresses.Address;
+&nbsp;import onetoone.Addresses.AddressRepository;
+&nbsp;import onetoone.Concerts.Concert;
+&nbsp;import onetoone.Concerts.ConcertRepository;
+&nbsp;import org.springframework.beans.factory.annotation.Autowired;
+&nbsp;import org.springframework.web.bind.annotation.*;
+&nbsp;
+&nbsp;import java.util.List;
+&nbsp;import java.util.Set;
+&nbsp;
+&nbsp;@Tag(name = &quot;Venue&quot;, description = &quot;Venue API&quot;)
+&nbsp;@RestController
+<b class="fc">&nbsp;public class VenueController {</b>
+&nbsp;
+&nbsp;    @Autowired
+&nbsp;    VenueRepository venueRepository;
+&nbsp;
+&nbsp;    @Autowired
+&nbsp;    AddressRepository addressRepository;
+&nbsp;
+&nbsp;    @Autowired
+&nbsp;    ConcertRepository concertRepository;
+&nbsp;
+&nbsp;    @Autowired
+&nbsp;    BandRespository bandRepository;
+&nbsp;
+<b class="fc">&nbsp;    private String success = &quot;{\&quot;message\&quot;:\&quot;success\&quot;}&quot;;</b>
+<b class="fc">&nbsp;    private String failure = &quot;{\&quot;message\&quot;:\&quot;failure\&quot;}&quot;;</b>
+&nbsp;
+&nbsp;    @Operation(summary = &quot;Get all Venues&quot;)
+&nbsp;    @GetMapping(path = &quot;/venues&quot;)
+&nbsp;    List&lt;Venue&gt; getAllVenues(){
+<b class="nc">&nbsp;        return venueRepository.findAll();</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Operation(summary = &quot;Get a specific Venue&quot;)
+&nbsp;    @GetMapping(path = &quot;/venues/{id}&quot;)
+&nbsp;    Venue getVenueById( @PathVariable int id){
+<b class="nc">&nbsp;        return venueRepository.findById(id);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /*@Operation(summary = &quot;Get a list of Venues from bandId&quot;)
+&nbsp;    @GetMapping(path = &quot;/venues/bands/{id}&quot;)
+&nbsp;    public Set&lt;Band&gt; getVenuesByBandId(@PathVariable int id){
+&nbsp;        Venue venue = venueRepository.findById(id);
+&nbsp;        return venue.getBands();
+&nbsp;    }*/
+&nbsp;
+&nbsp;    @Operation(summary = &quot;Get a specific Venues Concerts&quot;)
+&nbsp;    @GetMapping(&quot;/venues/{venueId}/concerts&quot;)
+&nbsp;    public List&lt;Concert&gt; getConcertsByVenueId(@PathVariable int venueId){
+<b class="nc">&nbsp;        Venue venue = venueRepository.findById(venueId);</b>
+<b class="nc">&nbsp;        return venue.getConcerts();</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Operation(summary = &quot;Create a new Venue&quot;)
+&nbsp;    @PostMapping(path = &quot;/venues&quot;)
+&nbsp;    String createVenue(@RequestBody Venue venue){
+<b class="nc">&nbsp;        if (venue == null)</b>
+<b class="nc">&nbsp;            return failure;</b>
+<b class="nc">&nbsp;        venueRepository.save(venue);</b>
+<b class="nc">&nbsp;        return success;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Operation(summary = &quot;Change a specific Venue&quot;)
+&nbsp;    @PutMapping(&quot;/venues/{id}&quot;)
+&nbsp;    Venue updateVenue(@PathVariable int id, @RequestBody Venue request){
+<b class="nc">&nbsp;        Venue venue = venueRepository.findById(id);</b>
+<b class="nc">&nbsp;        if(venue == null)</b>
+<b class="nc">&nbsp;            return null;</b>
+<b class="nc">&nbsp;        if(request.getName() != null) {</b>
+<b class="nc">&nbsp;            venue.setName(request.getName());</b>
+&nbsp;        }
+<b class="nc">&nbsp;        if(request.getImage() != null) {</b>
+<b class="nc">&nbsp;            venue.setImage(request.getImage());</b>
+&nbsp;        }
+<b class="nc">&nbsp;        if(request.getGenre() != null) {</b>
+<b class="nc">&nbsp;            venue.setGenre(request.getGenre());</b>
+&nbsp;        }
+<b class="nc">&nbsp;        if(request.getDescription() != null) {</b>
+<b class="nc">&nbsp;            venue.setDescription(request.getDescription());</b>
+&nbsp;        }
+<b class="nc">&nbsp;        if(request.getCapacity() != null) {</b>
+<b class="nc">&nbsp;            venue.setCapacity(request.getCapacity());</b>
+&nbsp;        }
+<b class="nc">&nbsp;        if(request.getAddress() != null) {</b>
+<b class="nc">&nbsp;            venue.setAddress(request.getAddress());</b>
+&nbsp;        }
+&nbsp;        //NO MANY TO MANY (USE SPECIFIC PUT AND DELETE)
+&nbsp;        /*if(request.getConcerts() != null) {
+&nbsp;            venue.setConcerts(request.getConcerts());
+&nbsp;        }*/
+<b class="nc">&nbsp;        if(request.isHasSeating() != venue.isHasSeating()) {</b>
+<b class="nc">&nbsp;            venue.setHasSeating(request.isHasSeating());</b>
+&nbsp;        }
+&nbsp;        //NO MANY TO MANY (USE SPECIFIC PUT AND DELETE)
+&nbsp;        /*if(request.getBands() != null) {
+&nbsp;            venue.setBands(request.getBands());
+&nbsp;        }*/
+<b class="nc">&nbsp;        venueRepository.save(venue);</b>
+<b class="nc">&nbsp;        return venueRepository.findById(id);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Operation(summary = &quot;Get a specific Venue from Login Info&quot;)
+&nbsp;    @GetMapping(path = &quot;/venue/{id}&quot;)
+&nbsp;    Venue getAttendeeByLoginId(@PathVariable int id){
+<b class="nc">&nbsp;        return venueRepository.findByLoginInfoId(id);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Operation(summary = &quot;Assign a Venue with a specific Address&quot;)
+&nbsp;    @PutMapping(&quot;/venues/{venueId}/addresses/{addressId}&quot;)
+&nbsp;    String assignAddressToVenue(@PathVariable int venueId, @PathVariable int addressId){
+<b class="nc">&nbsp;        Venue venue = venueRepository.findById(venueId);</b>
+<b class="nc">&nbsp;        Address address = addressRepository.findById(addressId);</b>
+<b class="nc">&nbsp;        if(venue == null || address == null)</b>
+<b class="nc">&nbsp;            return failure;</b>
+<b class="nc">&nbsp;        address.setVenue(venue);</b>
+<b class="nc">&nbsp;        venue.setAddress(address);</b>
+<b class="nc">&nbsp;        venueRepository.save(venue);</b>
+<b class="nc">&nbsp;        return success;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Operation(summary = &quot;Add a Band to a Venue&#39;s chat list (&amp; vis versa)&quot;)
+&nbsp;    @PutMapping(&quot;/venues/{venueId}/bands/{bandId}&quot;)
+&nbsp;    String addBandToVenue(@PathVariable int venueId, @PathVariable int bandId){
+<b class="nc">&nbsp;        Venue venue = venueRepository.findById(venueId);</b>
+&nbsp;
+<b class="nc">&nbsp;        Band band = bandRepository.findById(bandId);</b>
+&nbsp;
+<b class="nc">&nbsp;        if(venue == null || band == null){</b>
+<b class="nc">&nbsp;            return failure;</b>
+&nbsp;        }
+<b class="nc">&nbsp;        venue.addBand(band);</b>
+<b class="nc">&nbsp;        band.addVenue(venue);</b>
+&nbsp;
+<b class="nc">&nbsp;        venueRepository.save(venue);</b>
+<b class="nc">&nbsp;        bandRepository.save(band);</b>
+<b class="nc">&nbsp;        return success;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Operation(summary = &quot;Delete a Band from a Venue&#39;s chat list (&amp; vis versa)&quot;)
+&nbsp;    @DeleteMapping(&quot;/venues/{venueId}/bands/{bandId}&quot;)
+&nbsp;    String deleteBandFromVenue(@PathVariable int venueId, @PathVariable int bandId){
+<b class="nc">&nbsp;        Venue venue = venueRepository.findById(venueId);</b>
+&nbsp;
+<b class="nc">&nbsp;        Band band = bandRepository.findById(bandId);</b>
+&nbsp;
+<b class="nc">&nbsp;        if(venue == null || band == null){</b>
+<b class="nc">&nbsp;            return failure;</b>
+&nbsp;        }
+<b class="nc">&nbsp;        venue.removeBand(band);</b>
+<b class="nc">&nbsp;        band.removeVenue(venue);</b>
+&nbsp;
+<b class="nc">&nbsp;        venueRepository.save(venue);</b>
+<b class="nc">&nbsp;        bandRepository.save(band);</b>
+<b class="nc">&nbsp;        return success;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Operation(summary = &quot;Delete a specific Venue&quot;)
+&nbsp;    @DeleteMapping(path = &quot;/venues/{id}&quot;)
+&nbsp;    String deleteVenue(@PathVariable int id){
+<b class="nc">&nbsp;        List&lt;Concert&gt; concerts = concertRepository.findAllByVenue_Id(id);</b>
+<b class="nc">&nbsp;        if(concerts != null) {</b>
+<b class="nc">&nbsp;            for (Concert concert : concerts) {</b>
+<b class="nc">&nbsp;                concert.setVenue(null);</b>
+<b class="nc">&nbsp;                concertRepository.save(concert);</b>
+<b class="nc">&nbsp;            }</b>
+&nbsp;        }
+&nbsp;
+<b class="nc">&nbsp;        venueRepository.deleteById(id);</b>
+<b class="nc">&nbsp;        return success;</b>
+&nbsp;
+&nbsp;
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2024-04-26 23:55</div>
+</div>
+</body>
+</html>

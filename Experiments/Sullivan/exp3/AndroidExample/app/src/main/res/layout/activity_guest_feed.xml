@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context=".GuestFeedActivity"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    android:id="@+id/guestFeed">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/main_logout_btn"
+            android:clickable="true"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="20dp"
+            android:contentDescription="Logout"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/baseline_account_circle_24" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/banner"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_height="48dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:contentDescription="banner"
+            app:srcCompat="@drawable/banner" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/topIcon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="right"
+            android:layout_marginEnd="20dp"
+            android:scaleType="fitXY"
+            android:contentDescription="map"
+            app:srcCompat="@android:drawable/ic_menu_mapmode" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/scrollable"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
+
+            <view
+                android:id="@+id/card0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:clipToOutline="true"
+                android:background="@drawable/rounded_corner"
+                class="android.widget.LinearLayout"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/card0ImgLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/card0Image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="card"
+                        app:srcCompat="@drawable/blank" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="@color/white">
+
+                    <TextView android:id="@+id/card0Name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="sans-serif-black"
+                        android:textSize="30dp"
+                        android:textColor="@color/black"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView android:id="@+id/card0Price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="20dp"
+                        android:textSize="30dp"
+                        android:fontFamily="sans-serif-black"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+            </view>
+
+            <view
+                android:id="@+id/card1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:clipToOutline="true"
+                android:background="@drawable/rounded_corner"
+                class="android.widget.LinearLayout"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/card1Image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="card"
+                        app:srcCompat="@drawable/blank" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="@color/white">
+
+                    <TextView android:id="@+id/card1Name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="sans-serif-black"
+                        android:textSize="30dp"
+                        android:textColor="@color/black"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView android:id="@+id/card1Price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="20dp"
+                        android:textSize="30dp"
+                        android:fontFamily="sans-serif-black"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+            </view>
+
+            <view
+                android:id="@+id/card2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:clipToOutline="true"
+                android:background="@drawable/rounded_corner"
+                class="android.widget.LinearLayout"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/card2Image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="card"
+                        app:srcCompat="@drawable/blank" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="@color/white">
+
+                    <TextView android:id="@+id/card2Name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:fontFamily="sans-serif-black"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="20dp"
+                        android:textSize="30dp"
+                        android:textColor="@color/black"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView android:id="@+id/card2Price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="20dp"
+                        android:textSize="30dp"
+                        android:fontFamily="sans-serif-black"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+            </view>
+
+            <view
+                android:id="@+id/card3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:clipToOutline="true"
+                android:background="@drawable/rounded_corner"
+                class="android.widget.LinearLayout"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/card3Image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="card"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/blank" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="@color/white">
+
+                    <TextView android:id="@+id/card3Name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="20dp"
+                        android:textSize="30dp"
+                        android:fontFamily="sans-serif-black"
+                        android:textColor="@color/black"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView android:id="@+id/card3Price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:fontFamily="sans-serif-black"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="20dp"
+                        android:textSize="30dp"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+            </view>
+
+            <view
+                android:id="@+id/card4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:clipToOutline="true"
+                android:background="@drawable/rounded_corner"
+                class="android.widget.LinearLayout"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/card4Image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="card"
+                        app:srcCompat="@drawable/blank" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="@color/white">
+
+                    <TextView android:id="@+id/card4Name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="sans-serif-black"
+                        android:textSize="30dp"
+                        android:textColor="@color/black"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView android:id="@+id/card4Price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="20dp"
+                        android:textSize="30dp"
+                        android:fontFamily="sans-serif-black"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+            </view>
+
+            <view
+                android:id="@+id/card5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:clipToOutline="true"
+                android:background="@drawable/rounded_corner"
+                class="android.widget.LinearLayout"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/card5Image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="card"
+                        app:srcCompat="@drawable/blank" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="@color/white">
+
+                    <TextView android:id="@+id/card5Name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="sans-serif-black"
+                        android:textSize="30dp"
+                        android:textColor="@color/black" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView android:id="@+id/card5Price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="20dp"
+                        android:textSize="30dp"
+                        android:fontFamily="sans-serif-black"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+            </view>
+
+            <view
+                android:id="@+id/card6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:clipToOutline="true"
+                android:background="@drawable/rounded_corner"
+                class="android.widget.LinearLayout"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/card6Image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="card"
+                        app:srcCompat="@drawable/blank" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="@color/white">
+
+                    <TextView android:id="@+id/card6Name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:fontFamily="sans-serif-black"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="20dp"
+                        android:textSize="30dp"
+                        android:textColor="@color/black"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView android:id="@+id/card6Price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="20dp"
+                        android:textSize="30dp"
+                        android:fontFamily="sans-serif-black"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+            </view>
+
+            <view
+                android:id="@+id/card7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:clipToOutline="true"
+                android:background="@drawable/rounded_corner"
+                class="android.widget.LinearLayout"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/card7Image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="card"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/blank" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="@color/white">
+
+                    <TextView android:id="@+id/card7Name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="20dp"
+                        android:textSize="30dp"
+                        android:fontFamily="sans-serif-black"
+                        android:textColor="@color/black"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView android:id="@+id/card7Price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:fontFamily="sans-serif-black"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="20dp"
+                        android:textSize="30dp"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+            </view>
+
+            <view
+                android:id="@+id/card8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:clipToOutline="true"
+                android:background="@drawable/rounded_corner"
+                class="android.widget.LinearLayout"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/card8Image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:adjustViewBounds="true"
+                        app:srcCompat="@drawable/blank"
+                        android:contentDescription="card" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="@color/white">
+
+                    <TextView android:id="@+id/card8Name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:fontFamily="sans-serif-black"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="20dp"
+                        android:textSize="30dp"
+                        android:textColor="@color/black"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView android:id="@+id/card8Price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="20dp"
+                        android:textSize="30dp"
+                        android:fontFamily="sans-serif-black"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+            </view>
+
+            <view
+                android:id="@+id/card9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:clipToOutline="true"
+                android:background="@drawable/rounded_corner"
+                class="android.widget.LinearLayout"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/card9Image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="card"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/blank" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="@color/white">
+
+                    <TextView android:id="@+id/card9Name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="20dp"
+                        android:textSize="30dp"
+                        android:fontFamily="sans-serif-black"
+                        android:textColor="@color/black"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView android:id="@+id/card9Price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:fontFamily="sans-serif-black"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="20dp"
+                        android:textSize="30dp"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+            </view>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:background="@android:color/white">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:minWidth="58dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/prevPage"
+                android:clickable="true"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_weight="0"
+                android:scaleType="fitXY"
+                android:contentDescription="next page"
+                app:srcCompat="@drawable/baseline_arrow_circle_left_24" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/pageNumberDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingBottom="7dp"
+            android:textSize="30dp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-black"
+            android:text="num"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:minWidth="58dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+             <ImageView
+            android:id="@+id/nextPage"
+            android:clickable="true"
+            android:minWidth="48dp"
+            android:layout_weight="0"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:scaleType="fitXY"
+            android:contentDescription="next page"
+            app:srcCompat="@drawable/baseline_arrow_circle_right_24" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

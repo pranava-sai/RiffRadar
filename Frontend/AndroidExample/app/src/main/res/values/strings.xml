@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Riff Radar</string>
+    <string name="hint1"><i><b>Ex: 456 Elm Street, Metropolis, NY, 10001</b></i></string>
+    <string name="hint2"><i><b>100 Characters only</b></i></string>
+</resources>

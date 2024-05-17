@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MyStyle" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/colorSecondary</item>
+        <item name="android:textColor">@color/textColorSecondary</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="shapeAppearance">@style/ShapeAppearanceOverlay.Button</item>
+    </style>
+    
+    <style name="ShapeAppearanceOverlay.Button" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">32dp</item>
+    </style>
+</resources>

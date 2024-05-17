@@ -1,0 +1,278 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=windows-1252"> 
+  <title>Coverage Report > Venue</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">onetoone.Users</a>
+</div>
+
+<h1>Coverage Summary for Class: Venue (onetoone.Users)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Venue</td>
+<td class="coverageStat">
+  <span class="percent">
+    7.1%
+  </span>
+  <span class="absValue">
+    (2/28)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    8.1%
+  </span>
+  <span class="absValue">
+    (3/37)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">Venue$HibernateInstantiator$lNftJmYf</td>
+  </tr>
+  <tr>
+    <td class="name">Venue$HibernateProxy$aWrkjzsN</td>
+  </tr>
+<tr>
+  <td class="name"><strong>Total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    7.1%
+  </span>
+  <span class="absValue">
+    (2/28)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    8.1%
+  </span>
+  <span class="absValue">
+    (3/37)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package onetoone.Users;
+&nbsp;
+&nbsp;import com.fasterxml.jackson.annotation.JsonIgnore;
+&nbsp;import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+&nbsp;import com.fasterxml.jackson.annotation.JsonManagedReference;
+&nbsp;import jakarta.persistence.*;
+&nbsp;import onetoone.Addresses.Address;
+&nbsp;import onetoone.Concerts.Concert;
+&nbsp;//import onetoone.Messages.MessengersKey;
+&nbsp;//import onetoone.Messages.MessengersKey;
+&nbsp;
+&nbsp;import java.util.*;
+&nbsp;
+&nbsp;
+&nbsp;/**
+&nbsp; *
+&nbsp; * @author Vivek Bengre
+&nbsp; *
+&nbsp; */
+&nbsp;
+&nbsp;@Entity
+&nbsp;@Table(name = &quot;Venue&quot;)
+&nbsp;public class Venue {
+&nbsp;
+&nbsp;    /*
+&nbsp;     * The annotation @ID marks the field below as the primary key for the table created by springboot
+&nbsp;     * The @GeneratedValue generates a value if not already present, The strategy in this case is to start from 1 and increment for each table
+&nbsp;     */
+&nbsp;    @Id
+&nbsp;    @GeneratedValue(strategy = GenerationType.IDENTITY)
+&nbsp;    private int id;
+&nbsp;    private String name;
+&nbsp;    private String image;
+&nbsp;    private String genre;
+&nbsp;    private String description;
+&nbsp;    private String capacity;
+&nbsp;
+&nbsp;    private boolean hasSeating;
+&nbsp;
+<b class="fc">&nbsp;    @ManyToMany(cascade = {CascadeType.ALL})</b>
+&nbsp;    @JoinTable(name = &quot;venue_band_chats&quot;, joinColumns = @JoinColumn(name = &quot;venue_id&quot;), inverseJoinColumns = @JoinColumn(name = &quot;band_id&quot;))
+&nbsp;    //@JsonIgnoreProperties(&quot;venues&quot;)
+&nbsp;    private Set&lt;Band&gt; bandChats = new HashSet&lt;&gt;();
+&nbsp;
+&nbsp;    @OneToOne(cascade = CascadeType.ALL)
+&nbsp;    @JoinColumn(name = &quot;address_id&quot;)
+&nbsp;    private Address address;
+&nbsp;
+&nbsp;    @OneToMany//(mappedBy = &quot;venue&quot;)
+&nbsp;    //@JsonIgnore
+&nbsp;    @JsonIgnoreProperties(&quot;venue&quot;)
+&nbsp;    private List&lt;Concert&gt; concerts;
+&nbsp;
+&nbsp;    @OneToOne(cascade = CascadeType.ALL)
+&nbsp;    @JoinColumn(name = &quot;loginInfo_id&quot;)
+&nbsp;    private LoginInfo loginInfo;
+&nbsp;
+&nbsp;    public Venue(String name, String capacity, String description,
+<b class="nc">&nbsp;                 String image, String genre, boolean hasSeating) {</b>
+<b class="nc">&nbsp;        this.name = name;</b>
+<b class="nc">&nbsp;        this.capacity = capacity;</b>
+<b class="nc">&nbsp;        this.description = description;</b>
+<b class="nc">&nbsp;        this.genre = genre;</b>
+<b class="nc">&nbsp;        this.image = image;</b>
+<b class="nc">&nbsp;        this.hasSeating = hasSeating;</b>
+<b class="nc">&nbsp;        concerts = new ArrayList&lt;&gt;();</b>
+&nbsp;        //bandChats = new Set&lt;&gt;();
+&nbsp;    }
+&nbsp;
+<b class="fc">&nbsp;    public Venue() {</b>
+<b class="fc">&nbsp;        concerts = new ArrayList&lt;&gt;();</b>
+&nbsp;
+&nbsp;    }
+&nbsp;
+&nbsp;    // =============================== Getters and Setters for each field ================================== //
+&nbsp;
+&nbsp;    public int getId(){
+<b class="nc">&nbsp;        return id;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setId(int id){
+<b class="nc">&nbsp;        this.id = id;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public String getName(){
+<b class="nc">&nbsp;        return name;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setName(String name){
+<b class="nc">&nbsp;        this.name = name;</b>
+&nbsp;    }
+&nbsp;
+<b class="nc">&nbsp;    public String getImage(){return image;}</b>
+&nbsp;
+<b class="nc">&nbsp;    public void setImage(String image){this.image = image;}</b>
+&nbsp;
+<b class="nc">&nbsp;    public String getGenre(){return genre;}</b>
+&nbsp;
+<b class="nc">&nbsp;    public void setGenre(String genre){this.genre = genre;}</b>
+&nbsp;
+<b class="nc">&nbsp;    public String getDescription(){return description;}</b>
+&nbsp;
+<b class="nc">&nbsp;    public void setDescription(String description){this.description = description;}</b>
+&nbsp;
+<b class="nc">&nbsp;    public String getCapacity(){return capacity;}</b>
+&nbsp;
+<b class="nc">&nbsp;    public void setCapacity(String capacity){this.capacity = capacity;}</b>
+&nbsp;
+&nbsp;    public Address getAddress(){
+<b class="nc">&nbsp;        return address;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setAddress(Address address){
+<b class="nc">&nbsp;        this.address = address;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public List&lt;Concert&gt; getConcerts() {
+<b class="nc">&nbsp;        return concerts;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setConcerts(List&lt;Concert&gt; concerts) {
+<b class="nc">&nbsp;        this.concerts = concerts;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void addConcerts(Concert concert){
+<b class="nc">&nbsp;        this.concerts.add(concert);</b>
+&nbsp;    }
+&nbsp;
+<b class="nc">&nbsp;    public void removeConcerts(Concert concert){this.concerts.remove(concert);}</b>
+&nbsp;
+&nbsp;    public LoginInfo getLoginInfo() {
+<b class="nc">&nbsp;        return loginInfo;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setLoginInfo(LoginInfo loginInfo) {
+<b class="nc">&nbsp;        this.loginInfo = loginInfo;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public boolean isHasSeating() {
+<b class="nc">&nbsp;        return hasSeating;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setHasSeating(boolean hasSeating) {
+<b class="nc">&nbsp;        this.hasSeating = hasSeating;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @JsonIgnoreProperties({&quot;concerts&quot;, &quot;venues&quot;})
+&nbsp;    public Set&lt;Band&gt; getBands() {
+<b class="nc">&nbsp;        return bandChats;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setBands(Set&lt;Band&gt; bandChats){
+<b class="nc">&nbsp;        this.bandChats = bandChats;</b>
+&nbsp;    }
+&nbsp;    public void addBand(Band band){
+<b class="nc">&nbsp;        this.bandChats.add(band);</b>
+&nbsp;    }
+&nbsp;
+<b class="nc">&nbsp;    public void removeBand(Band band){this.bandChats.remove(band);}</b>
+&nbsp;
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2024-04-26 23:55</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context=".GreeterActivity"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:adjustViewBounds="true"
+        android:layout_height="400dp"
+        android:layout_gravity="center"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/logo1" />
+
+    <Button
+        android:id="@+id/main_login_btn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Login"
+        android:textSize="25sp"
+        android:fontFamily="sans-serif-black"
+        android:backgroundTint="@color/black"
+        android:textColor="#ffffff">
+    </Button>
+
+    <Button
+        android:id="@+id/main_signup_btn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Signup"
+        android:textSize="25sp"
+        android:fontFamily="sans-serif-black"
+        android:backgroundTint="@color/black"
+        android:textColor="#ffffff">
+    </Button>
+
+    <view
+        android:id="@+id/typeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:clipToOutline="true"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/black"
+        class="android.widget.LinearLayout"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/guestButton"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="23dp"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-black"
+            android:text="Guest"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+        <TextView
+            android:id="@+id/fanButton"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="23dp"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/white"
+            android:text="Fan"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+        <TextView
+            android:id="@+id/bandButton"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="23dp"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-black"
+            android:text="Band"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+        <TextView
+            android:id="@+id/hostButton"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="23dp"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-black"
+            android:text="Host"/>
+
+    </view>
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,171 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.androidexample"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+8-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="33" />
+9-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml:5:5-67
+11-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+12-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml:6:5-80
+12-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml:6:22-77
+13
+14    <permission
+14-->[androidx.core:core:1.9.0] /Users/CS/.gradle/caches/transforms-3/8c25e88eb4ea76e8f3d0900731d8ae12/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+15        android:name="com.example.androidexample.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+15-->[androidx.core:core:1.9.0] /Users/CS/.gradle/caches/transforms-3/8c25e88eb4ea76e8f3d0900731d8ae12/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+16        android:protectionLevel="signature" />
+16-->[androidx.core:core:1.9.0] /Users/CS/.gradle/caches/transforms-3/8c25e88eb4ea76e8f3d0900731d8ae12/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+17
+18    <uses-permission android:name="com.example.androidexample.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+18-->[androidx.core:core:1.9.0] /Users/CS/.gradle/caches/transforms-3/8c25e88eb4ea76e8f3d0900731d8ae12/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+18-->[androidx.core:core:1.9.0] /Users/CS/.gradle/caches/transforms-3/8c25e88eb4ea76e8f3d0900731d8ae12/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+19
+20    <application
+20-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml:9:5-46:19
+21        android:allowBackup="true"
+21-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml:10:9-35
+22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+22-->[androidx.core:core:1.9.0] /Users/CS/.gradle/caches/transforms-3/8c25e88eb4ea76e8f3d0900731d8ae12/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+23        android:dataExtractionRules="@xml/data_extraction_rules"
+23-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml:11:9-65
+24        android:debuggable="true"
+25        android:extractNativeLibs="false"
+26        android:fullBackupContent="@xml/backup_rules"
+26-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml:12:9-54
+27        android:icon="@mipmap/riffradar"
+27-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml:13:9-41
+28        android:label="@string/app_name"
+28-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml:14:9-41
+29        android:roundIcon="@mipmap/riffradar_round"
+29-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml:15:9-52
+30        android:supportsRtl="true"
+30-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml:16:9-35
+31        android:testOnly="true"
+32        android:theme="@style/Theme.AndroidExample" >
+32-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml:17:9-52
+33        <activity
+33-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml:19:9-21:40
+34            android:name="com.example.androidexample.SecondActivity"
+34-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml:20:13-43
+35            android:exported="false" />
+35-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml:21:13-37
+36        <activity
+36-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml:22:9-24:40
+37            android:name="com.example.androidexample.SignupActivity"
+37-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml:23:13-43
+38            android:exported="false" />
+38-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml:24:13-37
+39        <activity
+39-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml:25:9-27:40
+40            android:name="com.example.androidexample.LoginActivity"
+40-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml:26:13-42
+41            android:exported="false" />
+41-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml:27:13-37
+42        <activity
+42-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml:28:9-30:40
+43            android:name="com.example.androidexample.Payment"
+43-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml:29:13-36
+44            android:exported="false" />
+44-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml:30:13-37
+45        <activity
+45-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml:31:9-33:40
+46            android:name="com.example.androidexample.PaymentCompleteActivity"
+46-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml:32:13-52
+47            android:exported="false" />
+47-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml:33:13-37
+48        <activity
+48-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml:34:9-36:40
+49            android:name="com.example.androidexample.MyBookings"
+49-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml:35:13-39
+50            android:exported="false" />
+50-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml:36:13-37
+51        <activity
+51-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml:37:9-45:20
+52            android:name="com.example.androidexample.MainActivity"
+52-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml:38:13-41
+53            android:exported="true" >
+53-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml:39:13-36
+54            <intent-filter>
+54-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml:40:13-44:29
+55                <action android:name="android.intent.action.MAIN" />
+55-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml:41:17-69
+55-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml:41:25-66
+56
+57                <category android:name="android.intent.category.LAUNCHER" />
+57-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml:43:17-77
+57-->/Users/CS/Documents/309_Repo/mk1_2/Experiments/Pranava/AndroidExample/app/src/main/AndroidManifest.xml:43:27-74
+58            </intent-filter>
+59        </activity>
+60        <activity
+60-->[com.google.android.gms:play-services-auth:21.0.0] /Users/CS/.gradle/caches/transforms-3/58fcef28be673c75352b7b238e1b90fc/transformed/play-services-auth-21.0.0/AndroidManifest.xml:23:9-27:75
+61            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+61-->[com.google.android.gms:play-services-auth:21.0.0] /Users/CS/.gradle/caches/transforms-3/58fcef28be673c75352b7b238e1b90fc/transformed/play-services-auth-21.0.0/AndroidManifest.xml:24:13-93
+62            android:excludeFromRecents="true"
+62-->[com.google.android.gms:play-services-auth:21.0.0] /Users/CS/.gradle/caches/transforms-3/58fcef28be673c75352b7b238e1b90fc/transformed/play-services-auth-21.0.0/AndroidManifest.xml:25:13-46
+63            android:exported="false"
+63-->[com.google.android.gms:play-services-auth:21.0.0] /Users/CS/.gradle/caches/transforms-3/58fcef28be673c75352b7b238e1b90fc/transformed/play-services-auth-21.0.0/AndroidManifest.xml:26:13-37
+64            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+64-->[com.google.android.gms:play-services-auth:21.0.0] /Users/CS/.gradle/caches/transforms-3/58fcef28be673c75352b7b238e1b90fc/transformed/play-services-auth-21.0.0/AndroidManifest.xml:27:13-72
+65        <!--
+66            Service handling Google Sign-In user revocation. For apps that do not integrate with
+67            Google Sign-In, this service will never be started.
+68        -->
+69        <service
+69-->[com.google.android.gms:play-services-auth:21.0.0] /Users/CS/.gradle/caches/transforms-3/58fcef28be673c75352b7b238e1b90fc/transformed/play-services-auth-21.0.0/AndroidManifest.xml:33:9-37:51
+70            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+70-->[com.google.android.gms:play-services-auth:21.0.0] /Users/CS/.gradle/caches/transforms-3/58fcef28be673c75352b7b238e1b90fc/transformed/play-services-auth-21.0.0/AndroidManifest.xml:34:13-89
+71            android:exported="true"
+71-->[com.google.android.gms:play-services-auth:21.0.0] /Users/CS/.gradle/caches/transforms-3/58fcef28be673c75352b7b238e1b90fc/transformed/play-services-auth-21.0.0/AndroidManifest.xml:35:13-36
+72            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+72-->[com.google.android.gms:play-services-auth:21.0.0] /Users/CS/.gradle/caches/transforms-3/58fcef28be673c75352b7b238e1b90fc/transformed/play-services-auth-21.0.0/AndroidManifest.xml:36:13-107
+73            android:visibleToInstantApps="true" />
+73-->[com.google.android.gms:play-services-auth:21.0.0] /Users/CS/.gradle/caches/transforms-3/58fcef28be673c75352b7b238e1b90fc/transformed/play-services-auth-21.0.0/AndroidManifest.xml:37:13-48
+74
+75        <activity
+75-->[com.google.android.gms:play-services-base:18.0.1] /Users/CS/.gradle/caches/transforms-3/5a2b94c746ce46871975eb82e8b12f66/transformed/play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+76            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+76-->[com.google.android.gms:play-services-base:18.0.1] /Users/CS/.gradle/caches/transforms-3/5a2b94c746ce46871975eb82e8b12f66/transformed/play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+77            android:exported="false"
+77-->[com.google.android.gms:play-services-base:18.0.1] /Users/CS/.gradle/caches/transforms-3/5a2b94c746ce46871975eb82e8b12f66/transformed/play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+78            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+78-->[com.google.android.gms:play-services-base:18.0.1] /Users/CS/.gradle/caches/transforms-3/5a2b94c746ce46871975eb82e8b12f66/transformed/play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+79
+80        <meta-data
+80-->[com.google.android.gms:play-services-basement:18.2.0] /Users/CS/.gradle/caches/transforms-3/b3f64438faa6d95fc8e8f17ab12f6693/transformed/play-services-basement-18.2.0/AndroidManifest.xml:21:9-23:69
+81            android:name="com.google.android.gms.version"
+81-->[com.google.android.gms:play-services-basement:18.2.0] /Users/CS/.gradle/caches/transforms-3/b3f64438faa6d95fc8e8f17ab12f6693/transformed/play-services-basement-18.2.0/AndroidManifest.xml:22:13-58
+82            android:value="@integer/google_play_services_version" />
+82-->[com.google.android.gms:play-services-basement:18.2.0] /Users/CS/.gradle/caches/transforms-3/b3f64438faa6d95fc8e8f17ab12f6693/transformed/play-services-basement-18.2.0/AndroidManifest.xml:23:13-66
+83
+84        <provider
+84-->[androidx.emoji2:emoji2:1.2.0] /Users/CS/.gradle/caches/transforms-3/0fef484d2d7d3612c69865f977f8c08f/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+85            android:name="androidx.startup.InitializationProvider"
+85-->[androidx.emoji2:emoji2:1.2.0] /Users/CS/.gradle/caches/transforms-3/0fef484d2d7d3612c69865f977f8c08f/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+86            android:authorities="com.example.androidexample.androidx-startup"
+86-->[androidx.emoji2:emoji2:1.2.0] /Users/CS/.gradle/caches/transforms-3/0fef484d2d7d3612c69865f977f8c08f/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+87            android:exported="false" >
+87-->[androidx.emoji2:emoji2:1.2.0] /Users/CS/.gradle/caches/transforms-3/0fef484d2d7d3612c69865f977f8c08f/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+88            <meta-data
+88-->[androidx.emoji2:emoji2:1.2.0] /Users/CS/.gradle/caches/transforms-3/0fef484d2d7d3612c69865f977f8c08f/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+89                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+89-->[androidx.emoji2:emoji2:1.2.0] /Users/CS/.gradle/caches/transforms-3/0fef484d2d7d3612c69865f977f8c08f/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+90                android:value="androidx.startup" />
+90-->[androidx.emoji2:emoji2:1.2.0] /Users/CS/.gradle/caches/transforms-3/0fef484d2d7d3612c69865f977f8c08f/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+91            <meta-data
+91-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/CS/.gradle/caches/transforms-3/ae3e8265de2d7f874c642be745cd48da/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+92                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+92-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/CS/.gradle/caches/transforms-3/ae3e8265de2d7f874c642be745cd48da/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+93                android:value="androidx.startup" />
+93-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/CS/.gradle/caches/transforms-3/ae3e8265de2d7f874c642be745cd48da/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+94        </provider>
+95    </application>
+96
+97</manifest>

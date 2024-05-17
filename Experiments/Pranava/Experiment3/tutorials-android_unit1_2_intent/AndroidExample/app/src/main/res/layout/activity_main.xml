@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context=".MainActivity"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/main_msg_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Counter Machine"
+        android:layout_marginBottom="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="200dp"
+        android:textSize="30dp"
+        android:textColor="#3F51B5">
+    </TextView>
+
+    <TextView
+        android:id="@+id/counter_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Instructions:\n\n1. There are two options INCREASE and DECREASE which will either increase or decrease the number for you.\n\n2. Remember that the counter works for different counter options, like add or subtract 0, 1 or 2 or 3 or 5 or 8 or 13.\n\n3. You see the pattern here: it is FIBONACCI sequence. You read it right! FIBONACCI. Now see it yourself."
+        android:layout_marginBottom="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="15dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:textColor="#3F51B5">
+
+    </TextView>
+
+    <Button
+        android:id="@+id/main_counter_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center"
+        android:text="Let's Go ->> Counter Activity"
+        android:textSize="20sp"
+        android:textColor="#ffffff">
+    </Button>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

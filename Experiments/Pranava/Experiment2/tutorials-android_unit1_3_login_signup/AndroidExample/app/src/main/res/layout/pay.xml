@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context=".MainActivity"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:backgroundTint="@color/background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PAYMENT"
+        android:layout_gravity="center"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="0dp"
+        android:textSize="30dp"
+        android:textColor="#fc0303">
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="-155sp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textColor="#848884">
+        </TextView>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/email_edt"
+            android:layout_width="334dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="-20dp"
+            android:textColorHint="#848884"
+            android:hint="Email">
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="-120sp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Card Information"
+            android:textColor="#848884">
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/card_num_edt"
+            android:layout_width="334dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="-25dp"
+            android:textColorHint="#848884"
+            android:hint="Card Number">
+        </EditText>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/expire_edt"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="-15dp"
+        android:layout_marginBottom="10dp"
+        android:textColorHint="#848884"
+        android:hint="MM/YY">
+    </EditText>
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/cvc_edt"-->
+    <!--        android:layout_width="100dp"-->
+    <!--        android:layout_height="70dp"-->
+    <!--        android:layout_marginStart="100dp"-->
+    <!--        android:layout_marginTop="-25dp"-->
+    <!--        android:hint="MM/YY">-->
+    <!--    </EditText>-->
+
+    <EditText
+        android:id="@+id/cvc_edt"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="264dp"
+        android:layout_marginTop="-80dp"
+        android:textColorHint="#848884"
+        android:hint="CVC">
+    </EditText>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="30sp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="23px"
+            android:text="Card Holder Name"
+            android:textColor="#848884"></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/holder_edt"
+            android:layout_width="334dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="-25dp"
+            android:textColorHint="#848884"
+            android:hint="Card Holder Name">
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="30sp"
+        android:layout_marginTop="40sp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address"
+            android:textColor="#848884">
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/address_street1_edt"
+            android:layout_width="334dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="-28dp"
+            android:hint="Street 1"
+            android:textColorHint="#848884"></EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/address_street2_edt"
+            android:layout_width="334dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="-26dp"
+            android:textColorHint="#848884"
+            android:hint="Street 2">
+        </EditText>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/city_edt"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="-15dp"
+        android:textColorHint="#848884"
+        android:hint="City">
+    </EditText>
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/cvc_edt"-->
+    <!--        android:layout_width="100dp"-->
+    <!--        android:layout_height="70dp"-->
+    <!--        android:layout_marginStart="100dp"-->
+    <!--        android:layout_marginTop="-25dp"-->
+    <!--        android:hint="MM/YY">-->
+    <!--    </EditText>-->
+
+    <Spinner
+        android:id="@+id/state_edt"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="-70dp"
+        android:textColorHint="#848884"
+        android:hint="State">
+    </Spinner>
+
+    <EditText
+        android:id="@+id/zip_edt"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="-70dp"
+        android:textColorHint="#848884"
+        android:hint="Zip Code">
+    </EditText>
+
+    <Button
+        android:id="@+id/pay_btn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="20dp"
+        android:text="PAY"
+        android:textSize="20sp"
+        android:textColor="#ffffff">
+    </Button>
+</androidx.appcompat.widget.LinearLayoutCompat>

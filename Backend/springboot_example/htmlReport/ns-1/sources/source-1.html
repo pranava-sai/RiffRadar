@@ -1,0 +1,256 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=windows-1252"> 
+  <title>Coverage Report > Attendee</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">onetoone.Users</a>
+</div>
+
+<h1>Coverage Summary for Class: Attendee (onetoone.Users)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Attendee</td>
+<td class="coverageStat">
+  <span class="percent">
+    65%
+  </span>
+  <span class="absValue">
+    (13/20)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    60.9%
+  </span>
+  <span class="absValue">
+    (14/23)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">Attendee$HibernateInstantiator$sZTl7pzq</td>
+  </tr>
+  <tr>
+    <td class="name">Attendee$HibernateProxy$UCPxugeE</td>
+  </tr>
+<tr>
+  <td class="name"><strong>Total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    65%
+  </span>
+  <span class="absValue">
+    (13/20)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    60.9%
+  </span>
+  <span class="absValue">
+    (14/23)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package onetoone.Users;
+&nbsp;
+&nbsp;import com.fasterxml.jackson.annotation.JsonIgnore;
+&nbsp;import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+&nbsp;import jakarta.persistence.*;
+&nbsp;import onetoone.Carts.Cart;
+&nbsp;import onetoone.Groups.UserGroup;
+&nbsp;import java.util.ArrayList;
+&nbsp;import java.util.HashSet;
+&nbsp;import java.util.List;
+&nbsp;import com.fasterxml.jackson.annotation.JsonManagedReference;
+&nbsp;import jakarta.persistence.*;
+&nbsp;import onetoone.Concerts.Concert;
+&nbsp;import onetoone.Payment.PaymentInfo;
+&nbsp;
+&nbsp;import java.util.HashSet;
+&nbsp;import java.util.Set;
+&nbsp;
+&nbsp;
+&nbsp;/**
+&nbsp; *
+&nbsp; * @author Vivek Bengre
+&nbsp; *
+&nbsp; */
+&nbsp;
+&nbsp;@Entity
+&nbsp;public class Attendee {
+&nbsp;
+&nbsp;    /*
+&nbsp;     * The annotation @ID marks the field below as the primary key for the table created by springboot
+&nbsp;     * The @GeneratedValue generates a value if not already present, The strategy in this case is to start from 1 and increment for each table
+&nbsp;     */
+&nbsp;    @Id
+&nbsp;    @GeneratedValue(strategy = GenerationType.IDENTITY)
+&nbsp;    private int id;
+&nbsp;    private String name;
+&nbsp;
+&nbsp;    @OneToOne(cascade = CascadeType.ALL)
+&nbsp;    @JoinColumn(name = &quot;loginInfo_id&quot;)
+&nbsp;    private LoginInfo loginInfo;
+&nbsp;
+&nbsp;
+<b class="fc">&nbsp;    @ManyToMany(mappedBy = &quot;groupAttendees&quot;)</b>
+&nbsp;    Set&lt;UserGroup&gt; userGroups = new HashSet&lt;&gt;();
+&nbsp;
+&nbsp;
+<b class="fc">&nbsp;    @ManyToMany(cascade = {CascadeType.ALL})</b>
+&nbsp;    @JoinTable(name = &quot;favorites&quot;, joinColumns = @JoinColumn(name = &quot;attendee_id&quot;), inverseJoinColumns = @JoinColumn(name = &quot;concert_id&quot;))
+&nbsp;    //@JsonIgnore
+&nbsp;    private Set&lt;Concert&gt; concerts = new HashSet&lt;&gt;();
+&nbsp;
+&nbsp;    @OneToOne(cascade = CascadeType.ALL)
+&nbsp;    @JoinColumn(name = &quot;cart_id&quot;)
+&nbsp;    private Cart cart;
+&nbsp;
+<b class="nc">&nbsp;    public Attendee(String name) {</b>
+<b class="nc">&nbsp;        this.name = name;</b>
+&nbsp;    }
+&nbsp;
+<b class="fc">&nbsp;    public Attendee() {</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    // =============================== Getters and Setters for each field ================================== //
+&nbsp;
+&nbsp;    public int getId(){
+<b class="fc">&nbsp;        return id;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setId(int id){
+<b class="nc">&nbsp;        this.id = id;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public String getName(){
+<b class="fc">&nbsp;        return name;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setName(String name){
+<b class="fc">&nbsp;        this.name = name;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public LoginInfo getLoginInfo() {
+<b class="fc">&nbsp;        return loginInfo;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setLoginInfo(LoginInfo loginInfo) {
+<b class="fc">&nbsp;        this.loginInfo = loginInfo;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;
+&nbsp;    public void setUserGroup(UserGroup userGroup){
+<b class="fc">&nbsp;        this.userGroups.add(userGroup);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void removeFromUserGroup(UserGroup userGroup){
+<b class="nc">&nbsp;        this.userGroups.remove(userGroup);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;
+&nbsp;    public Set&lt;UserGroup&gt; getUserGroups() {
+<b class="fc">&nbsp;        return userGroups;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setUserGroups(Set&lt;UserGroup&gt; userGroups) {
+<b class="nc">&nbsp;        this.userGroups = userGroups;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;    //@JsonIgnore
+&nbsp;    public Set&lt;Concert&gt; getFavorites() {
+<b class="fc">&nbsp;        return concerts;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setFavorites(Set&lt;Concert&gt; favorites){
+<b class="fc">&nbsp;        this.concerts = favorites;</b>
+&nbsp;    }
+&nbsp;    public void addFavorite(Concert favorite){
+<b class="nc">&nbsp;        this.concerts.add(favorite);</b>
+&nbsp;    }
+&nbsp;
+<b class="nc">&nbsp;    public void removeFavorite(Concert favorite){this.concerts.remove(favorite);}</b>
+&nbsp;
+&nbsp;    public Set&lt;Concert&gt; getConcerts() {
+<b class="fc">&nbsp;        return concerts;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setConcerts(Set&lt;Concert&gt; concerts) {
+<b class="nc">&nbsp;        this.concerts = concerts;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public Cart getCart() {
+<b class="fc">&nbsp;        return cart;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    public void setCart(Cart cart) {
+<b class="nc">&nbsp;        this.cart = cart;</b>
+&nbsp;    }
+&nbsp;}
+&nbsp;
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2024-04-26 23:55</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,262 @@
+[
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/mipmap-xhdpi_riffradar_foreground.webp.flat",
+        "source": "com.example.androidexample.app-main-33:/mipmap-xhdpi/riffradar_foreground.webp"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/mipmap-hdpi_riffradar_round.webp.flat",
+        "source": "com.example.androidexample.app-main-33:/mipmap-hdpi/riffradar_round.webp"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.androidexample.app-main-33:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/layout_signup_activity.xml.flat",
+        "source": "com.example.androidexample.app-main-33:/layout/signup_activity.xml"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/layout_activity_signup_team.xml.flat",
+        "source": "com.example.androidexample.app-main-33:/layout/activity_signup_team.xml"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/drawable_facebook.png.flat",
+        "source": "com.example.androidexample.app-main-33:/drawable/facebook.png"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/drawable_details.png.flat",
+        "source": "com.example.androidexample.app-main-33:/drawable/details.png"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.androidexample.app-main-33:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/layout_payment_gateway.xml.flat",
+        "source": "com.example.androidexample.app-main-33:/layout/payment_gateway.xml"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.androidexample.app-main-33:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/mipmap-xxxhdpi_riffradar.webp.flat",
+        "source": "com.example.androidexample.app-main-33:/mipmap-xxxhdpi/riffradar.webp"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/drawable_password_icon.xml.flat",
+        "source": "com.example.androidexample.app-main-33:/drawable/password_icon.xml"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/layout_my_bookings.xml.flat",
+        "source": "com.example.androidexample.app-main-33:/layout/my_bookings.xml"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/drawable_bg1.webp.flat",
+        "source": "com.example.androidexample.app-main-33:/drawable/bg1.webp"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.androidexample.app-main-33:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/layout_pay.xml.flat",
+        "source": "com.example.androidexample.app-main-33:/layout/pay.xml"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/drawable_receivedpay_updated.png.flat",
+        "source": "com.example.androidexample.app-main-33:/drawable/receivedpay_updated.png"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/layout_activity_main.xml.flat",
+        "source": "com.example.androidexample.app-main-33:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.androidexample.app-main-33:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/mipmap-xhdpi_riffradar.webp.flat",
+        "source": "com.example.androidexample.app-main-33:/mipmap-xhdpi/riffradar.webp"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/xml_backup_rules.xml.flat",
+        "source": "com.example.androidexample.app-main-33:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/drawable_rifficon.png.flat",
+        "source": "com.example.androidexample.app-main-33:/drawable/rifficon.png"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/layout_activity_login.xml.flat",
+        "source": "com.example.androidexample.app-main-33:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/mipmap-anydpi-v26_riffradar_round.xml.flat",
+        "source": "com.example.androidexample.app-main-33:/mipmap-anydpi-v26/riffradar_round.xml"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/mipmap-xxhdpi_riffradar.webp.flat",
+        "source": "com.example.androidexample.app-main-33:/mipmap-xxhdpi/riffradar.webp"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/layout_activity_second.xml.flat",
+        "source": "com.example.androidexample.app-main-33:/layout/activity_second.xml"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/mipmap-anydpi-v26_riffradar.xml.flat",
+        "source": "com.example.androidexample.app-main-33:/mipmap-anydpi-v26/riffradar.xml"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/mipmap-mdpi_riffradar_foreground.webp.flat",
+        "source": "com.example.androidexample.app-main-33:/mipmap-mdpi/riffradar_foreground.webp"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/drawable_riff.png.flat",
+        "source": "com.example.androidexample.app-main-33:/drawable/riff.png"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.androidexample.app-main-33:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/drawable_google.jpg.flat",
+        "source": "com.example.androidexample.app-main-33:/drawable/google.jpg"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.androidexample.app-main-33:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.androidexample.app-main-33:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/mipmap-mdpi_riffradar_round.webp.flat",
+        "source": "com.example.androidexample.app-main-33:/mipmap-mdpi/riffradar_round.webp"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.androidexample.app-main-33:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.androidexample.app-main-33:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/mipmap-hdpi_riffradar_foreground.webp.flat",
+        "source": "com.example.androidexample.app-main-33:/mipmap-hdpi/riffradar_foreground.webp"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/drawable_done.xml.flat",
+        "source": "com.example.androidexample.app-main-33:/drawable/done.xml"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/mipmap-xxhdpi_riffradar_foreground.webp.flat",
+        "source": "com.example.androidexample.app-main-33:/mipmap-xxhdpi/riffradar_foreground.webp"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/drawable_g.png.flat",
+        "source": "com.example.androidexample.app-main-33:/drawable/g.png"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.androidexample.app-main-33:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/drawable_concert.jpg.flat",
+        "source": "com.example.androidexample.app-main-33:/drawable/concert.jpg"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.androidexample.app-main-33:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.androidexample.app-main-33:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/drawable_twitter.webp.flat",
+        "source": "com.example.androidexample.app-main-33:/drawable/twitter.webp"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/layout_payment.xml.flat",
+        "source": "com.example.androidexample.app-main-33:/layout/payment.xml"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/mipmap-xxxhdpi_riffradar_foreground.webp.flat",
+        "source": "com.example.androidexample.app-main-33:/mipmap-xxxhdpi/riffradar_foreground.webp"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/drawable_garage.jpg.flat",
+        "source": "com.example.androidexample.app-main-33:/drawable/garage.jpg"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/drawable_radar.xml.flat",
+        "source": "com.example.androidexample.app-main-33:/drawable/radar.xml"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/drawable_rifflogolight.png.flat",
+        "source": "com.example.androidexample.app-main-33:/drawable/rifflogolight.png"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.androidexample.app-main-33:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/mipmap-xxxhdpi_riffradar_round.webp.flat",
+        "source": "com.example.androidexample.app-main-33:/mipmap-xxxhdpi/riffradar_round.webp"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/drawable_g2.png.flat",
+        "source": "com.example.androidexample.app-main-33:/drawable/g2.png"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/mipmap-xxhdpi_riffradar_round.webp.flat",
+        "source": "com.example.androidexample.app-main-33:/mipmap-xxhdpi/riffradar_round.webp"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/mipmap-mdpi_riffradar.webp.flat",
+        "source": "com.example.androidexample.app-main-33:/mipmap-mdpi/riffradar.webp"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/layout_login_activity.xml.flat",
+        "source": "com.example.androidexample.app-main-33:/layout/login_activity.xml"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/mipmap-xhdpi_riffradar_round.webp.flat",
+        "source": "com.example.androidexample.app-main-33:/mipmap-xhdpi/riffradar_round.webp"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/layout_payconfirm.xml.flat",
+        "source": "com.example.androidexample.app-main-33:/layout/payconfirm.xml"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/drawable_bg2.webp.flat",
+        "source": "com.example.androidexample.app-main-33:/drawable/bg2.webp"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.androidexample.app-main-33:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/drawable_stateparks.jpg.flat",
+        "source": "com.example.androidexample.app-main-33:/drawable/stateparks.jpg"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/drawable_rifflight.png.flat",
+        "source": "com.example.androidexample.app-main-33:/drawable/rifflight.png"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/drawable_blank.jpg.flat",
+        "source": "com.example.androidexample.app-main-33:/drawable/blank.jpg"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/drawable_spotify.png.flat",
+        "source": "com.example.androidexample.app-main-33:/drawable/spotify.png"
+    },
+    {
+        "merged": "com.example.androidexample.app-merged_res-31:/mipmap-hdpi_riffradar.webp.flat",
+        "source": "com.example.androidexample.app-main-33:/mipmap-hdpi/riffradar.webp"
+    }
+]

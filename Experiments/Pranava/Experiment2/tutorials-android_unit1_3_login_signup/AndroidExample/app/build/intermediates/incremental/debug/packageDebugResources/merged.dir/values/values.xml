@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#000000</color>
+    <color name="black">#FF000000</color>
+    <color name="blue">#0077FF</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">GFG App</string>
+    <string name="blink">BLINK</string>
+    <string name="clockwise">ROTATE</string>
+    <string name="course_name">Course Name</string>
+    <string name="course_rating">Course Rating</string>
+    <string name="fade">FADE</string>
+    <string name="move">MOVE</string>
+    <string name="slide">SLIDE</string>
+    <string name="stop_animation">STOP ANIMATION</string>
+    <string name="zoom">ZOOM</string>
+    <style name="Base.Theme.AndroidExample" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.AndroidExample" parent="Base.Theme.AndroidExample"/>
+</resources>

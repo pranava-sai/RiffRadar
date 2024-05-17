@@ -1,0 +1,154 @@
+{
+    "concerts": [
+        {
+            "name": "Pink Floyd",
+            "price": "$75",
+            "image": "concert0"
+        },
+        {
+            "name": "Summer Festival",
+            "price": "$65",
+            "image": "concert1"
+        },
+        {
+            "name": "The Rolling Stones",
+            "price": "$120",
+            "image": "concert2"
+        },
+        {
+            "name": "Coachella",
+            "price": "$100",
+            "image": "concert3"
+        },
+        {
+            "name": "Foo Fighters",
+            "price": "$80",
+            "image": "concert4"
+        },
+        {
+            "name": "Beyoncé",
+            "price": "$150",
+            "image": "concert5"
+        },
+        {
+            "name": "Lollapalooza",
+            "price": "$90",
+            "image": "concert6"
+        },
+        {
+            "name": "Ed Sheeran",
+            "price": "$110",
+            "image": "concert7"
+        },
+        {
+            "name": "Metallica",
+            "price": "$130",
+            "image": "concert8"
+        },
+        {
+            "name": "Electric Daisy Carnival",
+            "price": "$95",
+            "image": "concert9"
+        },
+        {
+            "name": "Glastonbury",
+            "price": "$140",
+            "image": "concert10"
+        },
+        {
+            "name": "U2",
+            "price": "$85",
+            "image": "concert11"
+        },
+        {
+            "name": "Green Day",
+            "price": "$125",
+            "image": "concert12"
+        },
+        {
+            "name": "Ariana Grande",
+            "price": "$110",
+            "image": "concert13"
+        },
+        {
+            "name": "Tomorrowland",
+            "price": "$160",
+            "image": "concert14"
+        },
+        {
+            "name": "Sunset Music Festival",
+            "price": "$140",
+            "image": "concert15"
+        },
+        {
+            "name": "Red Hot Chili Peppers",
+            "price": "$110",
+            "image": "concert16"
+        },
+        {
+            "name": "Muse",
+            "price": "$120",
+            "image": "concert17"
+        },
+        {
+            "name": "The Weeknd",
+            "price": "$90",
+            "image": "concert18"
+        },
+        {
+            "name": "Ultra Music Festival",
+            "price": "$130",
+            "image": "concert19"
+        },
+        {
+            "name": "Drake",
+            "price": "$150",
+            "image": "concert20"
+        },
+        {
+            "name": "Shawn Mendes",
+            "price": "$100",
+            "image": "concert21"
+        },
+        {
+            "name": "Sziget Festival",
+            "price": "$120",
+            "image": "concert22"
+        },
+        {
+            "name": "The Chainsmokers",
+            "price": "$80",
+            "image": "concert23"
+        },
+        {
+            "name": "The Black Keys",
+            "price": "$110",
+            "image": "concert24"
+        },
+        {
+            "name": "Imagine Dragons",
+            "price": "$95",
+            "image": "concert25"
+        },
+        {
+            "name": "Electric Zoo",
+            "price": "$180",
+            "image": "concert26"
+        },
+        {
+            "name": "Shakira",
+            "price": "$130",
+            "image": "concert27"
+        },
+        {
+            "name": "Bonnaroo",
+            "price": "$120",
+            "image": "concert28"
+        },
+        {
+            "name": "Coachella 2.0",
+            "price": "$110",
+            "image": "concert29"
+        }
+    ]
+}

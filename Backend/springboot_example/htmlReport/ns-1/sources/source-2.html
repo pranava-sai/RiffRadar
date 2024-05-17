@@ -1,0 +1,227 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=windows-1252"> 
+  <title>Coverage Report > AttendeeController</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">onetoone.Users</a>
+</div>
+
+<h1>Coverage Summary for Class: AttendeeController (onetoone.Users)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">AttendeeController</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    40%
+  </span>
+  <span class="absValue">
+    (4/10)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    27.5%
+  </span>
+  <span class="absValue">
+    (11/40)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package onetoone.Users;
+&nbsp;
+&nbsp;import io.swagger.v3.oas.annotations.Operation;
+&nbsp;import io.swagger.v3.oas.annotations.tags.Tag;
+&nbsp;import onetoone.Concerts.Concert;
+&nbsp;import onetoone.Concerts.ConcertRepository;
+&nbsp;import org.springframework.beans.factory.annotation.Autowired;
+&nbsp;import org.springframework.web.bind.annotation.*;
+&nbsp;import org.springframework.data.jpa.repository.JpaRepository;
+&nbsp;import org.springframework.transaction.annotation.Transactional;
+&nbsp;
+&nbsp;import java.util.List;
+&nbsp;import java.util.Set;
+&nbsp;
+&nbsp;
+&nbsp;/**
+&nbsp; *
+&nbsp; * @author Vivek Bengre
+&nbsp; *
+&nbsp; */
+&nbsp;
+&nbsp;@Tag(name = &quot;Attendee&quot;, description = &quot;Attendee API&quot;)
+&nbsp;@RestController
+<b class="fc">&nbsp;public class AttendeeController {</b>
+&nbsp;
+&nbsp;    @Autowired
+&nbsp;    AttendeeRepository attendeeRepository;
+&nbsp;
+&nbsp;    @Autowired
+&nbsp;    ConcertRepository concertRepository;
+&nbsp;
+<b class="fc">&nbsp;    private String success = &quot;{\&quot;message\&quot;:\&quot;success\&quot;}&quot;;</b>
+<b class="fc">&nbsp;    private String failure = &quot;{\&quot;message\&quot;:\&quot;failure\&quot;}&quot;;</b>
+&nbsp;
+&nbsp;    @Operation(summary = &quot;Get all Attendees&quot;)
+&nbsp;    @GetMapping(path = &quot;/attendees&quot;)
+&nbsp;    List&lt;Attendee&gt; getAllAttendees(){
+<b class="nc">&nbsp;        return attendeeRepository.findAll();</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Operation(summary = &quot;Get a specific Attendee by LoginInfo&quot;)
+&nbsp;    @GetMapping(path = &quot;/attendee/{id}&quot;)
+&nbsp;    Attendee getAttendeeByLoginId(@PathVariable int id){
+<b class="nc">&nbsp;        return attendeeRepository.findByLoginInfoId(id);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Operation(summary = &quot;Get a specific Attendee by their ID&quot;)
+&nbsp;    @GetMapping(path = &quot;/attendees/{id}&quot;)
+<b class="nc">&nbsp;    Attendee getAttendeeById(@PathVariable int id){return attendeeRepository.findById(id);}</b>
+&nbsp;
+&nbsp;    @Operation(summary = &quot;Get a specific Attendee by their name&quot;)
+&nbsp;    @GetMapping(path = &quot;/attendeesbyname/{name}&quot;)
+<b class="fc">&nbsp;    Attendee getAttendeeByName(@PathVariable String name){return attendeeRepository.findByName(name);}</b>
+&nbsp;
+&nbsp;    @Operation(summary = &quot;Create a new Attendee&quot;)
+&nbsp;    @PostMapping(path = &quot;/attendees&quot;)
+&nbsp;    String createAttendee(@RequestBody Attendee attendee){
+<b class="fc">&nbsp;        if (attendee == null)</b>
+<b class="nc">&nbsp;            return failure;</b>
+<b class="fc">&nbsp;        attendeeRepository.save(attendee);</b>
+<b class="fc">&nbsp;        return success;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Operation(summary = &quot;Change a specific Attendee&quot;)
+&nbsp;    @PutMapping(&quot;/attendees/{id}&quot;)
+&nbsp;    Attendee updateAttendee(@PathVariable int id, @RequestBody Attendee request){
+<b class="nc">&nbsp;        Attendee user = attendeeRepository.findById(id);</b>
+<b class="nc">&nbsp;        if(user == null)</b>
+<b class="nc">&nbsp;            return null;</b>
+<b class="nc">&nbsp;        if(request.getName() != null){</b>
+<b class="nc">&nbsp;            user.setName(request.getName());</b>
+&nbsp;        }
+<b class="nc">&nbsp;        attendeeRepository.save(user);</b>
+<b class="nc">&nbsp;        return attendeeRepository.findById(id);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Operation(summary = &quot;Add a Concert to an Attendee&#39;s favorites&quot;)
+&nbsp;    @PutMapping(&quot;/attendees/{attendeeId}/concerts/{concertId}&quot;)
+&nbsp;    String addConcertToAttendee(@PathVariable int attendeeId, @PathVariable int concertId){
+<b class="nc">&nbsp;        Attendee attendee = attendeeRepository.findById(attendeeId);</b>
+&nbsp;
+<b class="nc">&nbsp;        Concert concert = concertRepository.findById(concertId);</b>
+&nbsp;
+<b class="nc">&nbsp;        if(attendee == null || concert == null){</b>
+<b class="nc">&nbsp;            return failure;</b>
+&nbsp;        }
+<b class="nc">&nbsp;        attendee.addFavorite(concert);</b>
+<b class="nc">&nbsp;        concert.addAttendee(attendee);</b>
+&nbsp;
+<b class="nc">&nbsp;        attendeeRepository.save(attendee);</b>
+<b class="nc">&nbsp;        concertRepository.save(concert);</b>
+<b class="nc">&nbsp;        return success;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    @Operation(summary = &quot;Remove a Concert to an Attendee&#39;s favorites&quot;)
+&nbsp;    @DeleteMapping(&quot;/attendees/{attendeeId}/concerts/{concertId}&quot;)
+&nbsp;    String deleteConcertToAttendee(@PathVariable int attendeeId, @PathVariable int concertId){
+<b class="nc">&nbsp;        Attendee attendee = attendeeRepository.findById(attendeeId);</b>
+<b class="nc">&nbsp;        Concert concert = concertRepository.findById(concertId);</b>
+&nbsp;
+<b class="nc">&nbsp;        if(attendee == null || concert == null){</b>
+<b class="nc">&nbsp;            return failure;</b>
+&nbsp;        }
+<b class="nc">&nbsp;        attendee.removeFavorite(concert);</b>
+<b class="nc">&nbsp;        concert.removeAttendee(attendee);</b>
+&nbsp;
+<b class="nc">&nbsp;        attendeeRepository.save(attendee);</b>
+<b class="nc">&nbsp;        concertRepository.save(concert);</b>
+<b class="nc">&nbsp;        return success;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;    @Operation(summary = &quot;Delete a specific Attendee&quot;)
+&nbsp;    @DeleteMapping(path = &quot;/attendees/{id}&quot;)
+&nbsp;    String deleteAttendee(@PathVariable int id){
+<b class="fc">&nbsp;        Attendee attendee = attendeeRepository.findById(id);</b>
+<b class="fc">&nbsp;        attendee.setFavorites(null);</b>
+<b class="fc">&nbsp;        attendeeRepository.deleteById(id);</b>
+<b class="fc">&nbsp;        return success;</b>
+&nbsp;    }
+&nbsp;}
+&nbsp;
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2024-04-26 23:55</div>
+</div>
+</body>
+</html>

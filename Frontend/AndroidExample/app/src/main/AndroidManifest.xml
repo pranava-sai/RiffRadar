@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <application
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AndroidExample"
+        tools:targetApi="31">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${MAPS_API_KEY}" />
+        <meta-data
+            android:name="discovery.API_KEY"
+            android:value="${DISCOVERY_API_KEY}" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <activity
+            android:name=".GreeterActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".RadiusActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GroupChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AttendeeListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BandListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VenueListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GroupInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HotelList"
+            android:exported="false" />
+        <activity
+            android:name=".SearchHotelsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GroupsHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChatActivityGroup"
+            android:exported="false" />
+        <activity
+            android:name=".JoinGroupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreateGroupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GroupListings"
+            android:exported="false" />
+        <activity
+            android:name=".DeleteGroupsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminScreen"
+            android:exported="false" />
+        <activity
+            android:name=".DeleteEvents"
+            android:exported="false" />
+        <activity
+            android:name=".DeleteUsers"
+            android:exported="false" />
+        <activity
+            android:name=".EmailUserVerify"
+            android:exported="false" />
+        <activity
+            android:name=".OTP_Reset_Password"
+            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".EditUserProfile"-->
+<!--            android:exported="false" />-->
+        <activity
+            android:name=".ResetPassword"
+            android:exported="false" />
+        <activity
+            android:name=".DeletePayInfo"
+            android:exported="false" />
+        <activity
+            android:name=".ReviewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ConcertRating"
+            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".UserProfile"-->
+<!--            android:exported="false" />-->
+        <activity
+            android:name=".ConcertActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GuestFeedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChangeEmail"
+            android:exported="false" />
+        <activity
+            android:name=".FanFeedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VenueFeedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BandActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BandFeedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VenueActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreateConcertActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Payment"
+            android:exported="false" />
+        <activity
+            android:name=".PaymentCompleteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BandProfileActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".FanProfileActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".VenueProfileActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".BandEditProfileActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".FanEditProfileActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".VenueEditProfileActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".ChatHomeActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".ChatActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".FavoritesActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".ManageConcertsActivity"
+            android:exported="false"/>
+    </application>
+
+</manifest>
