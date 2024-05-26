@@ -2,6 +2,8 @@ package com.example.androidexample;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -31,6 +33,7 @@ public class SignupActivity extends AppCompatActivity {
     private TextView otp;
     private int OTP;
     private int generatedOTP;
+    private ImageView emailCheck;
     private EditText OTPEntry;
     private EditText nameEditText;
     private EditText emailEditText;
@@ -77,6 +80,7 @@ public class SignupActivity extends AppCompatActivity {
         sendOTP = findViewById(R.id.sendOTP);
         otp = findViewById(R.id.OTPView);
         OTPEntry = findViewById(R.id.otp);
+        emailCheck = findViewById(R.id.validateEmail);
         resendOTP = findViewById(R.id.resendOTP);
         hide_show_password = findViewById(R.id.passwordIcon);
         hide_show_password2 = findViewById(R.id.cpasswordIcon);
@@ -89,6 +93,31 @@ public class SignupActivity extends AppCompatActivity {
         String[] userArray = {"Select Category", "Attendee", "Band", "Venue"};
         ArrayAdapter<String> userAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, userArray);
         userType.setAdapter(userAdapter);
+
+        emailEditText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // No action needed here
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                // Validate email as the text changes
+                boolean b = !(isValidEmail(s.toString()));
+                if (isValidEmail(s.toString())) {
+                    emailCheck.setImageResource(R.drawable.tick_green);
+                } else if (b) {
+                    emailCheck.setImageResource(R.drawable.tick_red);
+                } else {
+                    emailCheck.setImageResource(R.drawable.tick_grey);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                // No action needed here
+            }
+        });
 
         hide_show_password.setOnClickListener(new View.OnClickListener() {
             @Override

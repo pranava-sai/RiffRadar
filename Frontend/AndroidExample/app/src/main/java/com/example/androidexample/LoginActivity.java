@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -38,6 +40,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button loginButton;         // define login button variable
     private ImageView hide_show_password;
     private boolean passwordHiddenStatus;
+    private ImageView emailCheck;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +52,7 @@ public class LoginActivity extends AppCompatActivity {
         passwordEditText = findViewById(R.id.password);
         hide_show_password = findViewById(R.id.passwordIcon);
         passwordHiddenStatus = true;
+        emailCheck = findViewById(R.id.validateEmail);
         loginButton = findViewById(R.id.login_button);    // link to login button in the Login activity XML// link to signup button in the Login activity XML
 
         hide_show_password.setOnClickListener(new View.OnClickListener() {
@@ -65,6 +69,31 @@ public class LoginActivity extends AppCompatActivity {
                     passwordEditText.setSelection(passwordEditText.length());
                     passwordHiddenStatus = true;
                 }
+            }
+        });
+
+        emailEditText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // No action needed here
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                // Validate email as the text changes
+                boolean b = !(isValidEmail(s.toString()));
+                if (isValidEmail(s.toString())) {
+                    emailCheck.setImageResource(R.drawable.tick_green);
+                } else if (b) {
+                    emailCheck.setImageResource(R.drawable.tick_red);
+                } else {
+                    emailCheck.setImageResource(R.drawable.tick_grey);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                // No action needed here
             }
         });
 
