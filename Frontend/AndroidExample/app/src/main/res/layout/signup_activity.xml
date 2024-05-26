@@ -93,11 +93,26 @@
                     android:alpha="0.7"
                     android:textStyle="bold"/>
 
-                <EditText
-                    android:id="@+id/password"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPassword" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="352dp"
+                    android:layout_height="41dp">
+
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        tools:ignore="MissingConstraints" />
+
+                    <ImageView
+                        android:id="@+id/passwordIcon"
+                        android:layout_width="44dp"
+                        android:layout_height="33dp"
+                        android:src="@drawable/show_password"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        tools:ignore="MissingConstraints" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <View
                     android:layout_width="wrap_content"
@@ -111,11 +126,26 @@
                     android:alpha="0.7"
                     android:textStyle="bold"/>
 
-                <EditText
-                    android:id="@+id/confirm_password"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPassword" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="352dp"
+                    android:layout_height="41dp">
+
+                    <EditText
+                        android:id="@+id/confirm_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        tools:ignore="MissingConstraints" />
+
+                    <ImageView
+                        android:id="@+id/cpasswordIcon"
+                        android:layout_width="44dp"
+                        android:layout_height="33dp"
+                        android:src="@drawable/show_password"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        tools:ignore="MissingConstraints" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
                 <View
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"/>

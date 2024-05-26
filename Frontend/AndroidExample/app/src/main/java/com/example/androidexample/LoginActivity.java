@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -35,6 +36,8 @@ public class LoginActivity extends AppCompatActivity {
     private EditText emailEditText;  // define email edittext variable
     private EditText passwordEditText;  // define password edittext variable
     private Button loginButton;         // define login button variable
+    private ImageView hide_show_password;
+    private boolean passwordHiddenStatus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +47,26 @@ public class LoginActivity extends AppCompatActivity {
         /* initialize UI elements */
         emailEditText = findViewById(R.id.email);
         passwordEditText = findViewById(R.id.password);
+        hide_show_password = findViewById(R.id.passwordIcon);
+        passwordHiddenStatus = true;
         loginButton = findViewById(R.id.login_button);    // link to login button in the Login activity XML// link to signup button in the Login activity XML
+
+        hide_show_password.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (passwordHiddenStatus) {
+                    hide_show_password.setImageResource(R.drawable.hide_password);
+                    passwordEditText.setInputType(144); // 144: InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+                    passwordEditText.setSelection(passwordEditText.length());
+                    passwordHiddenStatus = false;
+                } else {
+                    hide_show_password.setImageResource(R.drawable.show_password);
+                    passwordEditText.setInputType(129); // 129: InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD
+                    passwordEditText.setSelection(passwordEditText.length());
+                    passwordHiddenStatus = true;
+                }
+            }
+        });
 
         /* onClick listener on login button pressed */
         loginButton.setOnClickListener(new View.OnClickListener() {

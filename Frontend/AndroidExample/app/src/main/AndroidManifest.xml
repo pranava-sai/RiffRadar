@@ -41,6 +41,9 @@
         <activity
             android:name=".CartActivity"
             android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".TestGroupChat"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".GroupChatActivity"
             android:exported="false" />

@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -50,6 +51,9 @@ public class SignupActivity extends AppCompatActivity {
 
     private Spinner userType;
     private String userCategory;
+    private ImageView hide_show_password;
+    private ImageView hide_show_password2;
+    private boolean passwordHiddenStatus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +78,9 @@ public class SignupActivity extends AppCompatActivity {
         otp = findViewById(R.id.OTPView);
         OTPEntry = findViewById(R.id.otp);
         resendOTP = findViewById(R.id.resendOTP);
+        hide_show_password = findViewById(R.id.passwordIcon);
+        hide_show_password2 = findViewById(R.id.cpasswordIcon);
+        passwordHiddenStatus = true;
 
         otp.setVisibility(View.GONE);
         OTPEntry.setVisibility(View.GONE);
@@ -82,6 +89,48 @@ public class SignupActivity extends AppCompatActivity {
         String[] userArray = {"Select Category", "Attendee", "Band", "Venue"};
         ArrayAdapter<String> userAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, userArray);
         userType.setAdapter(userAdapter);
+
+        hide_show_password.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (passwordHiddenStatus) {
+                    hide_show_password.setImageResource(R.drawable.hide_password);
+                    hide_show_password2.setImageResource(R.drawable.hide_password);
+                    passwordEditText.setInputType(144); // 144: InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+                    confirmEditText.setInputType(144);
+                    passwordEditText.setSelection(passwordEditText.length());
+                    passwordHiddenStatus = false;
+                } else {
+                    hide_show_password.setImageResource(R.drawable.show_password);
+                    hide_show_password2.setImageResource(R.drawable.show_password);
+                    passwordEditText.setInputType(129); // 129: InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD
+                    confirmEditText.setInputType(129);
+                    passwordEditText.setSelection(passwordEditText.length());
+                    passwordHiddenStatus = true;
+                }
+            }
+        });
+
+        hide_show_password2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (passwordHiddenStatus) {
+                    hide_show_password2.setImageResource(R.drawable.hide_password);
+                    hide_show_password.setImageResource(R.drawable.hide_password);
+                    passwordEditText.setInputType(144); // 144: InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+                    confirmEditText.setInputType(144);
+                    passwordEditText.setSelection(passwordEditText.length());
+                    passwordHiddenStatus = false;
+                } else {
+                    hide_show_password2.setImageResource(R.drawable.show_password);
+                    hide_show_password.setImageResource(R.drawable.show_password);
+                    passwordEditText.setInputType(129); // 129: InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD
+                    confirmEditText.setInputType(129);
+                    passwordEditText.setSelection(passwordEditText.length());
+                    passwordHiddenStatus = true;
+                }
+            }
+        });
 
         userType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
