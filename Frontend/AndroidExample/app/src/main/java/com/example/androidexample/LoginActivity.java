@@ -40,7 +40,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button loginButton;         // define login button variable
     private ImageView hide_show_password;
     private boolean passwordHiddenStatus;
-    private ImageView emailCheck;
+    private ImageView emailCheck, forgot;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +53,16 @@ public class LoginActivity extends AppCompatActivity {
         hide_show_password = findViewById(R.id.passwordIcon);
         passwordHiddenStatus = true;
         emailCheck = findViewById(R.id.validateEmail);
+        forgot = findViewById(R.id.forgot);
         loginButton = findViewById(R.id.login_button);    // link to login button in the Login activity XML// link to signup button in the Login activity XML
+
+        forgot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, EmailUserVerify.class);
+                startActivity(intent);
+            }
+        });
 
         hide_show_password.setOnClickListener(new View.OnClickListener() {
             @Override

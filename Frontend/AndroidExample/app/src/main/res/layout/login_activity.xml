@@ -137,19 +137,33 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Remember me"
-                    android:layout_centerVertical="true"
-                    android:alpha="0.7"/>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Forgot Password?"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentEnd="true"/>
+                    <!--                <TextView-->
+                    <!--                    android:layout_width="wrap_content"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:text="Forgot Password?"-->
+                    <!--                    android:layout_centerVertical="true"-->
+                    <!--                    android:layout_alignParentEnd="true"/>-->
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:alpha="0.7"
+                        android:text="Remember me"
+                        tools:layout_editor_absoluteX="0dp"
+                        tools:layout_editor_absoluteY="-12dp" />
+
+                    <ImageView
+                        android:id="@+id/forgot"
+                        android:layout_width="145dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/fg4"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
             </RelativeLayout>
 
             <View
@@ -176,7 +190,7 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="75dp"></Space>
+                android:layout_height="25dp"></Space>
             
 
 
